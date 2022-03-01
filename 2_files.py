@@ -20,3 +20,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def main():
+    
+    with open('referat.txt', 'r', encoding='utf-8') as tekst:
+        tasktext = tekst.read() 
+        print(f'Оригинальный текст: {tasktext}')
+    
+        str_lenght = len(tasktext)
+        print(f'Длина строки {str_lenght}')
+        words = len(tasktext.split())
+        print(f'Количество слов {words}')
+
+        wow = tasktext.replace('.', '!')
+        print(wow)
+
+    with open('referat2.txt', 'a', encoding='utf-8') as newtext:
+        newtext.write(wow)
+
+        pass
+
+if __name__ == "__main__":
+    main()
